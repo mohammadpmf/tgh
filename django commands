@@ -1,0 +1,4 @@
+1) django-admin startproject config .
+2) python3 (py) manage.py runserver
+3) python3 (py) manage.py startapp mesal
+4) mirim tooye urls.py config ye path ezafe mikonim be url e app emoon. 'mesal.urls'
