@@ -9,11 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Some Title</title>
+    <title>Post detail</title>
 </head>
 <body>
-
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">CodingYar.com</a>
@@ -42,24 +40,38 @@
 
 <div class="container mt-4">
     <div class="row">
-        
-        
-        
         <div class="col-9">
-            {% for post in posts %}
-            <div class="card shadow-sm my-3">
-                <div class="card-body">
-                    <h5 class="card-title"> {{ post.title }} </h5>
-                    <h6 class="card-subtitle mb-2 text-muted small py-2"> {{ post.date_created }} </h6>
-                    <p class="card-text py-3">
-                        {{ post.text }}
-                    </p>
-                    <a href="/blog/{{post.id}}" class="btn btn-sm btn-success">Read More</a>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
 
+            <div class="card shadow my-3 p-5">
+                <h1>Some Title</h1>
+                <p class="small text-muted mt-2">By: MohammadHadi Hajihosseini</p>
+                <p class="mt-2">this is the description</p>
+            </div>
+        
+            <div class="card shadow my-3 p-5">
+                <h3>Comments:</h3>
+                    No comments yet! Be the first one.
+            </div>
+        
+            <div class="card shadow my-3 p-5">
+                <h3>Add new comment:</h3>
+                <form method="POST">
+                    <div class="form-group py-2">
+                        <label class="py-1" for="author_name">Enter your name:</label>
+                        <input type="text" class="form-control" placeholder="e.g. John Doe" name="author_name">
+                    </div>
+                    <div class="form-group py-2">
+                        <label class="py-1" for="email">Your Email:</label>
+                        <input type="email" class="form-control" placeholder="example@gmail.com" name="email">
+                    </div>
+                    <div class="form-group py-2">
+                        <label class="py-1" for="comment_text">Comment text:</label>
+                        <textarea class="form-control" name="text" rows="3" placeholder="Enter your comment text here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
         <div class="col-3">
 
                 <div class="card my-4">
@@ -75,7 +87,6 @@
                 </div>
 
         </div>
-
     </div>
 </div>
 
