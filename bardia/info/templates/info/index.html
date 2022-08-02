@@ -1,1 +1,31 @@
-salam
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .jadval{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border: solid 3px black;
+            border-radius: 2px;
+            margin: 2%;
+        }
+    </style>
+</head>
+<body>
+    
+    {% for person in people %}
+        <div class="jadval">
+            <p>Name: {{ person.name }}</p>
+            <p>Father name: {{ person.father }}</p>
+            <p>Favorite color: {{ person.color }}</p>
+            <p>Favorite food: {{ person.food }}</p>
+        </div>   
+    {% endfor %}
+     
+</body>
+</html>
