@@ -8,7 +8,7 @@ def show_blog(request):
     return render(request, 'blog/index.html', context)
 
 def new_post(request):
-    return render(request, 'blog/index.html')
+    return render(request, 'blog/new_post.html')
 
 
 def show_detail(request, pk):
