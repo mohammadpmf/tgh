@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # MyApps
     'blog',
+    'arad',
 ]
 
 MIDDLEWARE = [
