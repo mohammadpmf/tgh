@@ -1,0 +1,222 @@
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    margin-bottom: 200px;
+}
+.bg-pic{
+    position: fixed;
+    background-image: url("https://www.diecastxchange.com/attachments/ferrari_458_italia_gt2_colour-gif.262493/");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.85;
+}
+
+
+nav{
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    box-shadow: 10px 0 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(46, 45, 45);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+nav a{
+    color: white;
+    overflow: hidden;
+    text-decoration: none;
+    position: relative;
+    margin: 0 1.5vw;
+
+}
+
+nav a:hover{
+    color: #D4B170;
+    transition-duration: 400ms;
+
+}
+
+
+
+
+
+#Mansoory{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    font-size: 2em;
+    color: white;
+
+}
+
+#Mansoory:hover{
+    color: #D4B170;
+    transition-duration: 400ms;
+}
+
+
+nav a::after{
+    content: '';
+    position: absolute;
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #D4B170;
+    width: 0%;
+    transition-duration: 400ms;
+}
+
+nav a:hover::after{
+    visibility: visible;
+    border-bottom: 1px solid #D4B170;
+    width: 50%;
+    transition-duration: 400ms;
+
+}
+
+nav a::before{
+    /* content: "";
+    border-bottom: 1px solid #D4B170;
+    visbility : hidden
+    margin-top: 2%;
+    margin-left: 2%;
+    position: absolute;
+    width: 30%;
+    height: 100%; */
+    content: '';
+    position: absolute;
+    margin-left: 100%;
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+    width: 55%;
+    border-bottom: 1px solid #D4B170;
+    transition-duration: 400ms;
+}
+
+nav a:hover::before{
+    visibility: visible;
+    border-bottom: 1px solid #D4B170;
+    transform: translateX(-100%);
+    transition-duration: 400ms;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.slide-btns{
+    cursor: pointer;
+    height: 100px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.slides{
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    visibility: hidden;
+    color: red;
+    z-index: 1;
+}
+
+div.slides img{
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide-show{
+    visibility: visible;
+    animation: fadeIn 0.5s ;    
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 94vh;
+    color: white;
+    font-size: 1.5em;
+}
+
+.big{
+    margin-top: 10vh;
+    font-size: 350%;
+}
+.mansoory-news{
+    margin-top: 35vh;
+    font-size: 275%;
+}
+
+.main a{
+    border: 1px solid #D4B170;
+    color: #D4B170;
+    padding: 8px 40px;
+    margin-top: 6vh;
+    transition-duration: 400ms;
+    cursor: pointer;
+}
+
+.main a:hover{
+    background-color: #D4B170;
+    color: black;
+    transition-duration: 400ms;
+}
+
+@keyframes fadeIn {
+from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    nav{
+        justify-content: space-between;
+    }
+    nav a{
+      display: none;
+    }
+    .stay{
+        display: inline;
+    }
+    a{
+        font-size: 1.3em;
+    }
+    a.right{
+        margin-right: -36vw;
+    }
+    #Mansoory{
+        margin-left: 5vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    a{
+        font-size: 1.1em;
+    }
+}
