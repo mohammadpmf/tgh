@@ -1,0 +1,500 @@
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-image: url('https://www.mansory.com/themes/custom/mansory/img/section-bg.jpg');
+    background-repeat: repeat;
+}
+
+#Mansoory{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    font-size: 2em;
+    color: white;
+
+}
+
+#Mansoory:hover{
+    color: #D4B170;
+    transition-duration: 400ms;
+}
+
+
+
+
+.bg-pic{
+    position: fixed;
+    background-image: url('https://www.mansory.com/themes/custom/mansory/img/section-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+
+.main{
+    padding-top: 55vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 95.5vh;
+    height: 100vh;
+}
+
+.discover{
+    font-size: 8em;
+}
+
+.mp{
+    font-size: 1.5em; 
+}
+
+.an{
+    margin-bottom: 15vh;
+}
+
+.mansoory-news{
+    margin-top: 10vh;
+    font-size: 275%;
+}
+
+.main>span{
+    border: 1px solid #D4B170;
+    color: #D4B170;
+    padding: 8px 40px;
+    margin-top: 6vh;
+    transition-duration: 400ms;
+}
+
+
+.main>span:hover{
+    background-color: #D4B170;
+    color: black;
+    transition-duration: 400ms;
+    background-position: center;
+
+}
+.cards{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.card{
+    width: 30vw;
+    height: 55vh;
+    margin: 2vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    overflow: hidden;
+}
+.card img{
+    height: 70%;
+}
+
+.card:after{
+    content: '☰Mansoory☰';
+    height: 0.5vh;
+    width: 10.3%;
+    font-size: 1.8em;
+    color: black;
+    margin-top: 20%;
+    padding: 5.5em;
+    text-decoration: none;
+    position: absolute;
+    transition-duration: 0.8s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.card:hover::after{
+    margin-top: 0%;
+    margin-bottom: 7.5%;
+    visibility: visible;
+    opacity: 1;
+    height: 0;
+    transition-duration: 0.8s;
+}
+
+
+.titles{    
+    z-index: 1;
+    height: 30%;
+    font-size: 1.8em;
+    color: black;
+    padding: 0.6em;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.titles:after{
+    content: '';
+    position: absolute;
+    margin-right: 100%;
+    visibility: hidden;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    border-bottom: 1px solid black;
+    transition-duration: 400ms;
+    margin-bottom: 5vh;
+}
+
+.titles:hover::after{
+    visibility: visible;
+    border-bottom: 1px solid black;
+    transform: translateX(100%);
+    transition-duration: 400ms;
+}
+
+.titles::before{
+    content: '';
+    position: absolute;
+    margin-left: 100%;
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+    width: 55%;
+    border-bottom: 1px solid black;
+    transition-duration: 400ms;
+    margin-bottom: 5vh;
+
+}
+
+.titles:hover::before{
+    visibility: visible;
+    border-bottom: 1px solid black;
+    transform: translateX(-100%);
+    transition-duration: 400ms;
+}
+
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: none;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(46, 45, 45);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+nav a{
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+
+}
+
+nav a:hover{
+    color: #D4B170;
+    transition-duration: 400ms;
+
+}
+
+
+nav a::after{
+    /* content: "";
+    border-bottom: 1px solid #D4B170;
+    visbility : hidden
+    margin-top: 2%;
+    margin-left: 2%;
+    position: absolute;
+    width: 30%;
+    height: 100%; */
+    content: '';
+    position: absolute;
+    margin-right: 100%;
+    visibility: hidden;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    border-bottom: 1px solid #D4B170;
+    transition-duration: 400ms;
+
+}
+
+nav a:hover::after{
+    visibility: visible;
+    border-bottom: 1px solid #D4B170;
+    transform: translateX(100%);
+    transition-duration: 400ms;
+}
+
+nav a::before{
+    /* content: "";
+    border-bottom: 1px solid #D4B170;
+    visbility : hidden
+    margin-top: 2%;
+    margin-left: 2%;
+    position: absolute;
+    width: 30%;
+    height: 100%; */
+    content: '';
+    position: absolute;
+    margin-left: 100%;
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+    width: 55%;
+    border-bottom: 1px solid #D4B170;
+    transition-duration: 400ms;
+
+}
+
+nav a:hover::before{
+    visibility: visible;
+    border-bottom: 1px solid #D4B170;
+    transform: translateX(-100%);
+    transition-duration: 400ms;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 0;
+}
+
+.slide-btns{
+    cursor: pointer;
+    height: 16vh;
+    width: 0.5vw;
+    margin: 0 15px;
+    background-color: #bbb;
+    display: inline-block;
+    vertical-align: top;
+    transition: background-color 0.6s ease;
+}
+
+.slide-btns:hover{
+    background-color: rgb(92, 92, 92);
+    }
+
+
+.slides{
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    visibility: hidden;
+    color: red;
+    z-index: -1;
+}
+
+.slide-show{
+    visibility: visible;
+    z-index: 0;
+    animation: fadeIn 0.5s ;    
+
+}
+
+    
+footer{
+    background-image: url('https://www.mansory.com/themes/custom/mansory/img/footer-bg.png');
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    padding: 1.25rem 0 0.9375rem;
+    color: #fff;
+    right: 0;
+    left: 0;
+}
+
+
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: none;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+    list-style-type: none;
+    display: block;
+    text-decoration: none;
+    margin-left: 10vw;
+    text-align: center;
+    width: 80vw;
+    height: 2.5vh;
+}
+
+
+ul li{
+    padding: 0px 10px;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    float: left;
+
+}
+
+
+ul li:hover{
+    color: #D4B170;
+    transition-duration: 400ms;
+
+}
+
+
+ul a{
+    padding: 0px 10px;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    float: left;
+
+}
+.facebook{
+    transition-duration: 800ms;
+}
+
+
+.facebook:hover{
+    color: blue;
+    transition-duration: 800ms;
+
+}
+
+.instagram{
+    transition-duration: 800ms;
+}
+
+
+.instagram:hover{
+    color: rgb(153, 87, 153);
+    transition-duration: 800ms;
+
+}
+
+.youtube{
+    transition-duration: 800ms;
+}
+
+
+.youtube:hover{
+    color: rgb(194, 34, 34);
+    transition-duration: 800ms;
+
+}
+
+
+ul li::after{
+    content: '';
+    position: absolute;
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #D4B170;
+    width: 0%;
+    transition-duration: 400ms;
+}
+
+ul li:hover::after{
+    visibility: visible;
+    border-bottom: 1px solid #D4B170;
+    width: 50%;
+    transition-duration: 400ms;
+
+}
+
+ul li::before{
+    /* content: "";
+    border-bottom: 1px solid #D4B170;
+    visbility : hidden
+    margin-top: 2%;
+    margin-left: 2%;
+    position: absolute;
+    width: 30%;
+    height: 100%; */
+    content: '';
+    position: absolute;
+    margin-left: 100%;
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+    width: 55%;
+    border-bottom: 1px solid #D4B170;
+    transition-duration: 400ms;
+
+}
+
+ul li:hover::before{
+    visibility: visible;
+    border-bottom: 1px solid #D4B170;
+    transform: translateX(-100%);
+    transition-duration: 400ms;
+}
+
+
+
+@keyframes fadeIn {
+from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    nav a{
+        display: none;
+    }
+    .stay{
+        display: inline;
+    }
+    .main{
+        height: 100%;
+    }
+    .slide-btns{
+        margin: 0 15px;
+        width: 1vw;
+    }
+    .btn-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    #btn1{
+        width: 0.7vw;
+        height: 15vh;
+    }    
+    #btn2{
+        width: 0.7vw;
+        height: 15vh;
+    }    
+    #btn3{
+        width: 0.7vw;
+        height: 15vh;
+    }
+    /* .main{
+
+    } */
+}
