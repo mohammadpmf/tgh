@@ -1,6 +1,8 @@
 from django.http import response
 from django.shortcuts import redirect, render
 from .models import Post
+from .forms import PostForm
+from django.shortcuts import get_object_or_404
 
 def show_blog(request):
     # context = {'posts': Post.objects.all()}
@@ -8,7 +10,6 @@ def show_blog(request):
     return render(request, 'blog/index.html', context)
 
 def new_post(request):
-    from .forms import PostForm
     if request.method == "POST":
         post = PostForm(request.POST)
         if post.is_valid():
@@ -30,7 +31,18 @@ def new_post(request):
 
 
 def show_detail(request, pk):
+    context = {'post': Post.objects.get(pk=pk)}
+    return render(request, 'blog/post_detail.html', context)
+
+def update_post(request, pk):
+    post = Post.objects.get(pk=pk)
+    form = PostForm(instance=post)
+    # Post.delete(post)
+    return render(request, 'blog/new_post.html', context = {'post': form })
+
+def delete_post(request, pk):
     if request.method == "POST":
-        print("OK")
+        post = Post.objects.get(pk=pk)
+        Post.delete(post)
     context = {'post': Post.objects.get(pk=pk)}
     return render(request, 'blog/post_detail.html', context)
