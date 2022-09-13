@@ -35,14 +35,16 @@ def show_detail(request, pk):
     return render(request, 'blog/post_detail.html', context)
 
 def update_post(request, pk):
-    post = Post.objects.get(pk=pk)
-    form = PostForm(instance=post)
-    # Post.delete(post)
-    return render(request, 'blog/new_post.html', context = {'post': form })
+    # post = Post.objects.get(pk=pk)
+    post = get_object_or_404(Post, pk=pk)
+    form = PostForm(request.POST or None, instance=post)
+    context = {'post': form }
+    if form.is_valid():
+        form.save()
+        return redirect('blog')
+    return render(request, 'blog/new_post.html', context)
 
 def delete_post(request, pk):
-    if request.method == "POST":
-        post = Post.objects.get(pk=pk)
-        Post.delete(post)
-    context = {'post': Post.objects.get(pk=pk)}
-    return render(request, 'blog/post_detail.html', context)
+    post = get_object_or_404(Post, pk=pk)
+    post.delete()
+    return redirect('blog')
