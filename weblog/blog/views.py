@@ -48,3 +48,6 @@ def delete_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('blog')
+
+def show_more(request):
+    return render(request, 'more.html')

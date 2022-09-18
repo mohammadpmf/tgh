@@ -7,4 +7,5 @@ urlpatterns = [
     path('new_post/', views.new_post, name='new_post'),
     path('<int:pk>/update/', views.update_post, name='update_post'),
     path('<int:pk>/delete/', views.delete_post, name='delete_post'),
+    path('show_more/', views.show_more, name='more'),
 ]

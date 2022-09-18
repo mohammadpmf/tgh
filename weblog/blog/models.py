@@ -16,3 +16,8 @@ class Post(models.Model):
     def __str__(self):
         return f"{self.title} {self.author}"
 
+class Comment(models.Model):
+    author = models.CharField(max_length=50)
+    text = models.TextField()
+    date_created = models.DateTimeField(auto_now_add=True)
+    likes = models.IntegerField()

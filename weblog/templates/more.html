@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="snow.css">
+    <title>Snow</title>
+    <style>
+      #particle{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    animation: movement 15s;
+    animation-fill-mode: forwards;
+
+    box-shadow: 0px 0px 10px rgb(85, 82, 82);
+}
+
+
+#particle2{
+    height: 10px;
+    width: 10px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    position: absolute;
+    animation: movement2 15s;
+    animation-fill-mode: forwards;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+
+}
+
+body{
+    overflow: hidden;
+    background-color: rgb(135, 132, 132);
+}
+
+@keyframes movement {
+    from {margin-top: 0;opacity: 1;-webkit-filter: blur(0.5px);filter: blur(0.5px);}
+    to {margin-top: 100%;opacity: 0;-webkit-filter: blur(5px);filter: blur(5px);}
+}
+
+@keyframes movement2 {
+    from {margin-top: 0;opacity:1;}
+    to {margin-top: 100%;opacity: 0;}
+}
+
+    </style>
+</head>
+<body id="body">
+  <br>
+  <br>
+  <div id="particle"></div>
+  <div id="particle2">A</div>
+  <p style="text-align: center;">Welcome to Snow Page</p>
+  <script>
+      var get = document.getElementById("particle")
+var a='bruh'
+get.style.filter="blur(3px)";
+
+const original = document.getElementById("particle");
+const original2 = document.getElementById("particle2");
+
+alert("Made by 'Ye bande khoda' ; Tamrin :Snow_anim")
+alert("Click on 'ok' to make the snow fall!")
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function go(){
+    while(1==1){
+        var rnd = Math.floor(Math.random()*100)
+        var rnd2 = Math.floor(Math.random()*100)
+        await sleep(600)
+        var clone = original.cloneNode(true)
+        clone.style.marginLeft = rnd+"%"
+        var clone2 = original2.cloneNode(true)
+        clone2.style.marginLeft = rnd2+"%"
+        document.getElementById("body").appendChild(clone2)
+        document.getElementById("body").appendChild(clone)
+    }
+}
+go()
+  </script>
+</body>
+</html>
