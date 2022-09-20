@@ -1,6 +1,6 @@
 from django.http import response
 from django.shortcuts import redirect, render
-from .models import Post
+from .models import Post, Comment
 from .forms import PostForm
 from django.shortcuts import get_object_or_404
 
@@ -31,7 +31,10 @@ def new_post(request):
 
 
 def show_detail(request, pk):
-    context = {'post': Post.objects.get(pk=pk)}
+    context = {
+        'post': Post.objects.get(pk=pk),
+        'comments': Comment.objects.all(),
+        }
     return render(request, 'blog/post_detail.html', context)
 
 def update_post(request, pk):

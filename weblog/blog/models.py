@@ -21,3 +21,5 @@ class Comment(models.Model):
     text = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     likes = models.IntegerField()
+    c_p = models.ForeignKey('blog.post', on_delete=models.CASCADE, null=True, blank=True)
+    
